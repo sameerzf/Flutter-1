@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'home_page.dart';
+import 'display_page.dart';
 import 'login_page.dart';
 
 void main() {
@@ -20,16 +22,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // darkTheme for dark and theme for light
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      theme: ThemeData(
+          primarySwatch: Colors.deepPurple,
+          fontFamily: GoogleFonts.lato().fontFamily),
       //darkTheme: ThemeData(
       //brightness: Brightness.dark,),
       //themeMode: ThemeMode.dark,
-      //home: HomePage(),
-      initialRoute: "/home",
+      //home: DisplayPage(),
+      //initialRoute: "/LoginPage",
       routes: {
+        "/": (context) => LoginPage(),
         "/home": (context) =>
             HomePage(), //do this or home: Homepage(), if we do both then app will give error
-        "/Login": (context) => LoginPage(),
+        "/display": (context) => DisplayPage(),
       },
     );
   }
