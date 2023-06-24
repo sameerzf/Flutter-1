@@ -36,8 +36,8 @@ class MyApp extends StatelessWidget {
         // "/home": (context) =>
         //     HomePage(), //do this or home: Homepage(), if we do both then app will give error
         MyRoutes.homeRoute: (context) => HomePage(),
-         MyRoutes.displayRoute: (context) => DisplayPage(),
-          MyRoutes.loginRoute:(context) => LoginPage()
+        MyRoutes.displayRoute: (context) => DisplayPage(),
+        MyRoutes.loginRoute: (context) => LoginPage()
       },
     );
   }
