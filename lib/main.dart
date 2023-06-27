@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/utils/routes.dart';
+import 'package:flutter_catalog/widgets/themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'home_page.dart';
@@ -24,9 +25,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // darkTheme for dark and theme for light
-      theme: ThemeData(
-          primarySwatch: Colors.blueGrey,
-          fontFamily: GoogleFonts.lato().fontFamily),
+      //Theme code is written in themes.dart in lib/widget folder
+      theme: MyTheme.lightTheme(context),
       //darkTheme: ThemeData(
       //brightness: Brightness.dark,),
       //themeMode: ThemeMode.dark,
