@@ -15,15 +15,16 @@ class _LoginPageState extends State<LoginPage> {
   bool changeButton = false;
   final _formKey = GlobalKey<FormState>();
   moveToHome(BuildContext context) async {
-    if(_formKey.currentState!.validate()){
-    setState(() {
-      changeButton = true;
-    });
-    await Future.delayed(Duration(seconds: 1));
-    await Navigator.pushNamed(context, MyRoutes.homeRoute);
-    setState(() {
-      changeButton = false;
-    });}
+    if (_formKey.currentState!.validate()) {
+      setState(() {
+        changeButton = true;
+      });
+      await Future.delayed(Duration(seconds: 1));
+      await Navigator.pushNamed(context, MyRoutes.homeRoute);
+      setState(() {
+        changeButton = false;
+      });
+    }
   }
 
   @override
@@ -49,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
                 "Welcome $name",
                 style: TextStyle(
                     fontSize: 25,
-                    color: Colors.purple,
+                    color: Colors.blueGrey,
                     fontWeight: FontWeight.bold),
               ),
               Padding(
@@ -98,11 +99,11 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     Material(
                       // we wrapped inkwell with material to get a effect while clicking the login button
-                      color: Colors.deepPurple,
+                      color: Colors.blueGrey,
                       borderRadius:
                           BorderRadius.circular(changeButton ? 20 : 8),
                       child: InkWell(
-                        splashColor: Color.fromARGB(161, 143, 79, 161),
+                        splashColor: Colors.blueGrey,
                         onTap: () => moveToHome(context),
                         child: AnimatedContainer(
                           duration: Duration(seconds: 1),

@@ -22,17 +22,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       // darkTheme for dark and theme for light
       theme: ThemeData(
-          primarySwatch: Colors.deepPurple,
+          primarySwatch: Colors.blueGrey,
           fontFamily: GoogleFonts.lato().fontFamily),
       //darkTheme: ThemeData(
       //brightness: Brightness.dark,),
       //themeMode: ThemeMode.dark,
-      //home: DisplayPage(),
-      //initialRoute: "/LoginPage",
+      //home: HomePage(),
+      initialRoute: "/HomePage",
       routes: {
-        "/": (context) => LoginPage(),
+        "/": (context) => HomePage(),
         // "/home": (context) =>
         //     HomePage(), //do this or home: Homepage(), if we do both then app will give error
         MyRoutes.homeRoute: (context) => HomePage(),
