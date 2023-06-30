@@ -11,9 +11,7 @@ class ItemWidget extends StatelessWidget {
     // using listtile because we are using listview builder on homepage
     return Card(
       child: ListTile(
-        onTap: (){
-          
-        },
+        onTap: () {},
         leading: Image.network(item.image),
         title: Text(item.name),
         subtitle: Text(item.desc),
